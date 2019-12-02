@@ -4,10 +4,15 @@
 \usepackage{style/ufsc}
 
 % Incluir arquivos da pasta figuras
-\graphicspath{{./figuras/}}
+\graphicspath{{./fig/}}
 
 % Pacote de texto aleatório
 \usepackage{lipsum}
+
+\newcommand{\thetitle}{Validation of a pre-clustering strategy for a recommender system}
+\newcommand{\theauthor}{Matheus Frata}
+\newcommand{\theadvisor}{André Carvalho Bittencourt}
+\newcommand{\thecoadvisor}{Felipe Campos Penha}
 
 
 % Início do documento
@@ -16,9 +21,10 @@
 %%
 %%	Incluir \capa para os slides
 %% 
-\titulo{Apresentação em \LaTeX!}
-\autores{Autor 1, Autor 2 e Autor 3}
-\universidade{Universidade Federal de Santa Catarina}
+\titulo{\textbf{\thetitle}}
+\autores{\theauthor}
+\universidade{Advisor: \theadvisor \\ Co-advisor: \thecoadvisor}
+
 \capa
 
 
@@ -62,18 +68,18 @@
 %%	Caixas de texto
 %%
 \begin{frame}{Caixas de Texto}
+\pause
+\begin{block}{Bloco Normal} 
+Conteúdo do bloco normal. 
+\end{block} \pause
 
-\begin{block}{Bloco Normal}
-Conteúdo do bloco normal.
-\end{block}
+\begin{alertblock}{Bloco de Alerta} 
+Conteúdo do bloco de alerta. 
+\end{alertblock} \pause
 
-\begin{alertblock}{Bloco de Alerta}
-Conteúdo do bloco de alerta.
-\end{alertblock}
-
-\begin{exampleblock}{Bloco de Exemplo}
-Conteúdo do bloco de exemplo
-\end{exampleblock}
+\begin{exampleblock}{Bloco de Exemplo} 
+Conteúdo do bloco de exemplo 
+\end{exampleblock} 
 
 \end{frame}
 
@@ -106,7 +112,7 @@ x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a}
 %%
 %%	Incluir \capadetras para agradecimentos e contato.
 %%
-\contato{Contato: \\ \url{{autor1, autor2, autor3}@ufsc.br}}
-\capadetras{Obrigado!}
+\contato{Contato: \\ \url{matheus.frata@gmail.br}}
+\capadetras{\textbf{\thetitle}}
 
 \end{document}

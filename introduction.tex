@@ -23,30 +23,30 @@
 %
 
 \begin{frame}{Neoway}
-\textbf{Big Data Analytics company\\} \pause
-\vspace{0.5cm}
-Solutions \pause
-\begin{itemize}
-    \item Win more: Sales \& Marketing, Digital, ... \pause
-    \item Lose less: Risk \& Compliance \pause
-\end{itemize}
-\vspace{0.5cm}
-Branches \pause
-\begin{itemize}
-    \item Automotive \pause
-    \item Consumer Goods \pause
-    \item Construction Industry \pause
-    \item Health \pause
-    \item and others...
-\end{itemize} 
+    Big Data Analytics company\\ \pause
+    \vspace{0.5cm}
+    Solutions \pause
+    \begin{itemize}
+        \item Win more: Sales \& Marketing, Digital, ... \pause
+        \item Lose less: Risk \& Compliance \pause
+    \end{itemize}
+    \vspace{0.5cm}
+    Branches \pause
+    \begin{itemize}
+        \item Automotive \pause
+        \item Consumer Goods \pause
+        \item Construction Industry \pause
+        \item Health \pause
+        \item and others...
+    \end{itemize} 
 \end{frame}
 
 %%
 
 \begin{frame}{On Target} \pause
-    \textbf{Sales \& Marketing solution\\}  \pause
+    Sales \& Marketing solution\\  \pause
     \vspace{0.5cm}
-    \textbf{Multiples branches \\}  \pause
+    Multiples branches \\  \pause
     \vspace{0.5cm}
     Lead Recommendation System \pause
     -> based on user profile
@@ -55,29 +55,61 @@ Branches \pause
 
 %%
 
-\begin{frame}{On Target - Benchmark}
+\begin{frame}{On Target}
+    \imagem{intro-brazil-comps-venn-diagram.png}{fig:venn}{Venn Diagram of the sets involved in the On Target.}
+\end{frame}
 
+%%    
+
+\begin{frame}{On Target - Benchmark} \pause
+    \vspace{0.5cm}
+    Project to test performance between versions \\ \pause
+    \vspace{0.5cm}
+    Almost 30 business scenarios
+\end{frame}
+
+%
+
+\begin{frame}{On Target - Benchmark}
+    \vspace{0.5cm}
+    \imagem
+        {intro-simi-dist-expected.png}
+        {fig:expected}
+        {A expected case at the benchmark}
+\end{frame}
+
+%%
+
+\begin{frame}{On Target - Benchmark}
+    \imagem
+        {intro-simi-dist-to-investigate.png}
+        {fig:to-investigate}
+        {A case to be investigated at the benchmark}
 \end{frame}
 
 %%
 
 \begin{frame}{}
     \begin{center}
-        \huge{\textbf{Can we improve the performance of the recommender system by pre-clustering the data?}}
+        \huge{\textbf{Can we improve the performance of the recommender system by pre-clustering the portfolio \pause
+        with firmographics data?}}
     \end{center}
 \end{frame}
 
 %%
 
-\begin{frame}{Objectives}
-\textbf{General Objective:\\}
+\begin{frame}{Objectives} \pause
+\textbf{General Objective:\\} \pause
 \begin{itemize}
-    \item Criação de um gerador de testes para verificação funcional de memória compartilhada baseado em Aprendizado de Máquina
+    \item Analyze whether the performance of the On Target improves by pre-clustering the portfolio with firmographics data before running the recommendation algorithm.  \pause
 \end{itemize}
 \vspace{0.5cm}
-\textbf{Specific Objectives:\\}
+\textbf{Specific Objectives:\\} \pause
 \begin{itemize}
-    \item Reutilização do \textit{framework} de verificação funcional de memória compartilhada já existente
-    \item Comparação com resultados obtidos com geradores considerados como estado da arte no assunto
+    \item Definition the pre-clustering strategy; \pause
+    \item Definition the pre-clustering algorithm; \pause
+    \item Defining the number of clusters for the benchmark cases; \pause
+    \item Run On Target against the benchmark with the pre-clustering approach; \pause
+    \item analyzing the distribution of similarity scores and performance metrics against the benchmark.
 \end{itemize}
 \end{frame}

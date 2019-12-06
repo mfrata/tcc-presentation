@@ -18,7 +18,7 @@
             \item<2-> Block Diagram 
         \end{itemize}
     \vspace{0.3cm}
-    \item{Clustering\\}
+    \item{Clustering procedures\\}
         \begin{itemize}
             \item<3-> Strategy and Pairing 
             \item<3-> Number of Clusters
@@ -33,21 +33,21 @@
 \begin{frame}{On Target and Benchmark - Terminology} 
     \pause
     \begin{itemize}
-        \item \textbf<3>{Portfolio}
+        \item Portfolio
         \vspace{0.1cm}
-        \item \textbf<4>{Market}
+        \item Market
         \vspace{0.1cm}
-        \item \textbf<5>{Features}
+        \item Features
         \vspace{0.1cm}
-        \item \textbf<6>{Study}
+        \item Study
         \vspace{0.1cm}
-        \item \textbf<7>{Experiment}
+        \item Experiment
     \end{itemize}
 \end{frame}
 
 %%
 
-\begin{frame}{On Target and Benchmark - Diagrams} \pause
+\begin{frame}{On Target and Benchmark - Diagrams}
     \imagem{fig/ch3-ot-blocks.png}{fig:ot-blocks}{Block Diagram of the On Target.}
 \end{frame}
 
@@ -60,25 +60,19 @@
 %%
 
 \begin{frame}{Clustering - Strategy and Pairing} \pause
-    \textbf<2->{Two clustering strategies\\} 
+    Two clustering strategies\\ \pause 
     \begin{itemize}
-        \item<3-> \fullNameClusterStrategyA{} (\nameClusterStrategyA{})
-        \item<3-> \fullNameClusterStrategyB{} (\nameClusterStrategyB{})
-    \end{itemize}
-    \vspace{0.5cm}
-    \textbf<2->{Two ways of pairing the clusters\\}
-    \begin{itemize}
-        \item<4-> \fullNameClusterPairingA{} (\nameClusterPairingA{})
-        \item<4-> \fullNameClusterPairingB{} (\nameClusterPairingB{})
+        \item \fullNameClusterStrategyA{} (\nameClusterStrategyA{})
+        \item \fullNameClusterStrategyB{} (\nameClusterStrategyB{})
     \end{itemize}
 \end{frame}
 
 %%
 
-\begin{frame}{Clustering - Strategy and Pairing}
+\begin{frame}{Clustering - Strategy}
     \begin{figure}
         \centering
-        \caption{Example of "\fullNameClusterStrategyA{}".} \pause
+        \caption{Example of "\fullNameClusterStrategyA{}".}
         \begin{subfigure}{0.45\textwidth}
             \centering
             \includegraphics[width=\linewidth]{fig/ch3-cluster-strategy-port-fit.png}
@@ -96,14 +90,14 @@
 
 %%
 
-\begin{frame}{Clustering - Strategy and Pairing}
+\begin{frame}{Clustering - Strategy}
     \begin{figure}
         \centering
-        \caption{Example of \fullNameClusterStrategyB{}} \pause
+        \caption{Example of \fullNameClusterStrategyB{}}
         \begin{subfigure}{\textwidth}
             \centering
             \includegraphics[width=0.5\linewidth]{fig/ch3-cluster-strategy-all.png}
-            \caption{KMeans learning and predicting to all data.}
+            \caption{KMeans learning and "predicting" to all data.}
             \label{fig:sub3}
         \end{subfigure}
     \end{figure}
@@ -111,10 +105,22 @@
 
 %%
 
-\begin{frame}{Clustering - Strategy and Pairing}
+\begin{frame}{Clustering - Strategy and Pairing} \pause
+    Two ways to pair the clusters\\ \pause
+    \begin{itemize}
+        \item \fullNameClusterPairingA{} (\nameClusterPairingA{})
+        \item \fullNameClusterPairingB{} (\nameClusterPairingB{})
+    \end{itemize}
+\end{frame}
+
+%%
+
+\begin{frame}{Clustering - Pairing}
     \begin{figure}
         \centering
-        \caption{Illustration of the cluster pairing. On the top is the "\fullNameClusterPairingA{}" and on the bottom the "\fullNameClusterPairingB{}".}       \includegraphics[height=6cm]{fig/ch3-cluster-pairing.png}
+        \caption{
+        Top: "\fullNameClusterPairingA{}" (\nameClusterStrategyA{}) \\
+        Bottom: "\fullNameClusterPairingB{}" (\nameClusterStrategyB{}).}       \includegraphics[height=6cm]{fig/ch3-cluster-pairing.png}
         \label{fig:cluster-pairing}
     \end{figure}
 \end{frame}
@@ -158,6 +164,8 @@
 %
 
 \begin{frame}{Clustering - Algorithm} \pause
+    Manual \\
+    \vspace{0.5cm}
     KMeans \\  
     \vspace{0.5cm}
     Gaussian Mixture Model (GMM) \\ 

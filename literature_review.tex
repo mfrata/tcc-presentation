@@ -20,72 +20,36 @@
 
 %%
 
-\begin{frame}{Recommender Systems}
-    \onslide<2->{Collaborative filtering \\}
-    \begin{itemize}
-        \item \onslide<5->{user-based} \onslide<6->{- "people like you, also like X"}
-        \item \onslide<7->{item-based} \onslide<8->{- "if you like X you may like Y"}
-    \end{itemize}
-    \onslide<3->{Content-based filtering \\}
+\begin{frame}{Recommender Systems} \pause
+    \begin{column}{.4\linewidth}
+        Collaborative filtering \pause
         \begin{itemize}
-            \item \onslide<9->{user profile}
+            \item "people like you also like X"
+            \item "if you like X  you may like Y"
         \end{itemize}
-    \vspace{0.5cm}
-    \onslide<4->{Hybrid}
-        \begin{itemize}
-            \item \onslide<10->{cold start}
-            \item \onslide<11->{sparse matrix (data)}
-        \end{itemize}
+    \end{column} \pause
+    \begin{column}{.6\linewidth}
+        \begin{figure}
+           \centering
+           \includegraphics[width=6cm]{fig/ch2-colab-filt-user-user.jpg}
+           \caption{User-based logic on collaborative filtering}
+        \end{figure}
+    \end{column}
 \end{frame}
-
-%%
 
 \begin{frame}{Recommender Systems}
-    \begin{figure}
-       \centering
-       \includegraphics[width=7cm]{fig/ch2-colab-filt-user-user.jpg}
-       \caption{User-based logic on collaborative filtering}
-    \end{figure}
-\end{frame}
-
-%%
-
-\begin{frame}{Recommender Systems - Benefits to business} \pause
-    $75\%$ of what people watch on Netflix come from recommendations \\ \pause
-    \vspace{0.5cm}
-    $70\%$ of people's time spent on YouTube comes from the recommendation \\ \pause
-    \vspace{0.5cm}
-    $35\%$ of the purchases on Amazon come from recommendations \\ \pause
-    \vspace{0.5cm}
-    Netflix prize!
-\end{frame}
-
-%%
-
-\begin{frame}{Recommender Systems - Lift} \pause
-    \begin{column}{.5\textwidth}
-        Market: $\mathcal M$ with size $|\mathcal M |\!=\!N$ \\ \pause
-        \vspace{0.25cm}
-        Leads: $\mathcal L \supset \mathcal M $, with $|\mathcal L|\!=\!n$ \\ \pause
-        \vspace{0.25cm}
-        $\mathcal L$ is unknown! \\ \pause
+    \begin{column}{.4\linewidth}
+        Content-based filtering \pause
+        \begin{itemize}
+            \item user profile \pause
+        \end{itemize}
     \end{column}
-    \begin{column}{.5\textwidth}
-        Random chance: $n/N$ \\ \pause
-        \vspace{0.25cm}
-        Company $X_i$ -> score $S_i$ \\ \pause
-        \vspace{0.25cm}
-        Ordered: $S_i>S_{i-1}$ from $S_N$ to $S_1$ \\ \pause
-    \end{column}
-    \vfill
-    \begin{column}{\textwidth}
-        Given a $k$: \pause
-        \vspace{0.25cm}
-        \LARGE{
-            \begin{equation*}
-                \mathrm{lift}_k = \frac{P(X_{i:k\leq i\leq N}\in \mathcal L)}{n/N}
-            \end{equation*}
-        }
+    \begin{column}{.6\linewidth}
+        \begin{figure}
+           \centering
+           \caption{Content-based example}
+           \includegraphics[width=.65\linewidth]{fig/content-based-example.png}
+        \end{figure}
     \end{column}
 \end{frame}
 
@@ -137,72 +101,70 @@
 
 %%
 
+\begin{frame}{Recommender Systems - Lift} \pause
+    \begin{column}{.5\textwidth}
+        Market: $\mathcal M$ with size $|\mathcal M |\!=\!N$ \\ \pause
+        \vspace{0.25cm}
+        Leads: $\mathcal L \supset \mathcal M $, with $|\mathcal L|\!=\!n$ \\ \pause
+        \vspace{0.25cm}
+        $\mathcal L$ is unknown! \\ \pause
+    \end{column}
+    \begin{column}{.5\textwidth}
+        Random chance: $n/N$ \\ \pause
+        \vspace{0.25cm}
+        Company $X_i$ -> score $S_i$ \\ \pause
+        \vspace{0.25cm}
+        Ordered: $S_i>S_{i-1}$ from $S_N$ to $S_1$ \\ \pause
+    \end{column}
+    \vfill
+    \begin{column}{\textwidth}
+        Given a $k$: \pause
+        \vspace{0.25cm}
+        \LARGE{
+            \begin{equation*}
+                \mathrm{lift}_k = \frac{P(X_{i:k\leq i\leq N}\in \mathcal L)}{n/N}
+            \end{equation*}
+        }
+    \end{column}
+\end{frame}
+
+%%
+
 \begin{frame}{Clustering} \pause
-    Unsupervised learning technique \\ \pause
     \vspace{0.2cm}
-    Hidden" structures/patterns in a dataset \\ \pause
-    \vspace{0.2cm}
-    Several applications \\ \pause
-    \begin{itemize}
-        \item Engineering and Computer Science \pause
-        \item Biology \pause
-        \item Astronomy \pause
-        \item and more. \pause
-    \end{itemize}
-    Various approaches \pause
-    \begin{itemize}
-        \item Connectivity-based \pause
-        \item Hierarchical Clustering \pause
-        \item Centroid-based \pause
-        \item Distribution-based \pause
-        \item Density-based
-    \end{itemize}
+    \begin{column}{\linewidth}
+        Unsupervised learning technique \\ \pause
+        \vspace{0.2cm}
+        "Hidden" structures/patterns in a dataset \\ \pause
+    \end{column}
+    \begin{column}{\linewidth}
+        \begin{figure}
+            \centering
+            \caption{Visualization of clusters}
+            \includegraphics[width=.8\linewidth]{fig/clustering-example.png}
+        \end{figure}
+    \end{column}
 \end{frame}
 
 %%
 
 \begin{frame}{PCA}
-    Orthogonal linear transformation \\ \pause
-    \vspace{0.5cm}
-    Principal Components \pause -> original data variance \\ \pause
-    \vspace{0.5cm}
-    Uses \pause
-    \begin{itemize}
-        \item PCA plot \pause
-        \item dimensionality reduction
-    \end{itemize}
-\end{frame}
-
-%
-
-\begin{frame}{PCA}
-    \begin{figure}
-        \centering
-        \caption{PCA algorithm steps.} \pause
-        \begin{subfigure}{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{fig/ch2-pca-steps-01.png}
-        \end{subfigure}  \pause
-        \begin{subfigure}{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{fig/ch2-pca-steps-02.png}
-        \end{subfigure} \pause
-        \begin{subfigure}{0.3\textwidth} 
-            \centering
-            \includegraphics[width=\linewidth]{fig/ch2-pca-steps-03.png}
-        \end{subfigure}\vskip 0.3em \pause
-        %%
-        \begin{subfigure}{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{fig/ch2-pca-steps-04.png}
-        \end{subfigure} \pause
-        \begin{subfigure}{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{fig/ch2-pca-steps-05.png}
-        \end{subfigure} \pause
-        \begin{subfigure}{0.3\textwidth}
-            \centering
-            \includegraphics[width=\linewidth]{fig/ch2-pca-steps-06.png}
-        \end{subfigure}
-    \end{figure}
+    \begin{column}{.5\linewidth}
+        \onslide<2->{Orthogonal linear transformation \\}
+        \vspace{0.5cm}
+        \onslide<3->{Principal Components} \onslide<4->{ -> original data variance} \\
+        \vspace{0.5cm}
+        \onslide<6->{Dimensionality reduction \\}
+        \vspace{0.5cm}
+        \onslide<7->{PCA plot}
+    \end{column} 
+    \begin{column}{.5\linewidth}
+    \onslide<5->{
+        \begin{figure}
+           \centering
+           \includegraphics[width=6cm]{fig/pca-example.png}
+           \caption{Principal components of a dataset}
+        \end{figure}
+    }
+    \end{column}
 \end{frame}
